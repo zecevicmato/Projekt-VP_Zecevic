@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/css/bmi.css" />
+    <title>Male BMI</title>
+    <style>
+      path {
+        stroke: white;
+        stroke-width: 0.3px;
+        fill: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="./female_bmi.html">Female</a>
+        <a href="./male_bmi.html" class="active-link">Male</a>
+      </div>
+      <h1 class="title">
+        Male BMI
+        <span id="decade"></span>
+      </h1>
+      <div>Placeholder</div>
+    </nav>
+    
+    <div class="slider-container">
+      <input type="range" id="year-slider" min="1980" max="2020" step="10" value="1980">
+    </div>
+
+    <div class="legend">
+      <h2>Legend</h2>
+      <div class="legend-items">
+        <div class="legend-item">
+          <span class="color" style="background-color: #bfcbdb;"></span>
+          <span class="value">18.5 - 22</span>
+        </div>
+        <div class="legend-item">
+          <span class="color" style="background-color: #ccebc5;"></span>
+          <span class="value">22 - 25</span>
+        </div>
+        <div class="legend-item">
+          <span class="color" style="background-color: #a8ddb5;"></span>
+          <span class="value">25 - 27.5</span>
+        </div>
+        <div class="legend-item">
+          <span class="color" style="background-color: #7bccc4;"></span>
+          <span class="value">27.5 - 30</span>
+        </div>
+        <div class="legend-item">
+          <span class="color" style="background-color: #4eb3d3;"></span>
+          <span class="value">30 - 32.5</span>
+        </div>
+        <div class="legend-item">
+          <span class="color" style="background-color: #2b8cbe;"></span>
+          <span class="value">32.5 - 35</span>
+        </div>
+        <div class="legend-item">
+          <span class="color" style="background-color: #08589e;"></span>
+          <span class="value">&gt; 35</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="details">
+      <h1 class="country"></h1>
+      <p class="bmi"></p>
+    </div>
+    <div class="graph"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
+    <script src="src/js/logic_male.js"></script>
+  </body>
+</html>
